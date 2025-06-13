@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
+    "build:local": "node LocalTesting/RunBuildLocalTestFiles.js",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "lint": "eslint . --ext .js,.jsx",
@@ -32,7 +33,7 @@
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@babel/preset-env": "^7.18.10",
-    "@types/chrome": "^0.1.193",
+    "@types/chrome": "^0.1.248",
     "@types/jest": "^28.1.8",
     "babel-jest": "^28.1.4",
     "copy-webpack-plugin": "^11.0.0",
@@ -49,6 +50,7 @@
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {
+    "fs-extra": "^11.2.0",
     "webextension-polyfill": "^0.10.0"
   },
   "browserslist": [

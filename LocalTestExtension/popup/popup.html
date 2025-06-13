@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+body {
+  width: auto; /* Adjust width to fit content */
+  padding: 0; /* Remove padding */
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 12px; /* Rounded edges for the bubble */
+  text-align: center;
+  display: inline-block; /* Make the body wrap around content */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+#button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 0; /* Remove margin */
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px; /* Adjust padding if needed */
+  border-radius: 4px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.icon-button:hover {
+  background-color: #f0f0f0;
+}
+
+.icon-button:active {
+  transform: scale(0.95);
+}
+
+.icon-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.icon-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-button.success {
+  background-color: rgba(76, 175, 80, 0.2);
+}
+
+.icon-button.error {
+  background-color: rgba(244, 67, 54, 0.2);
+}
+
+#status {
+  font-size: 12px;
+  margin: 0; /* Remove margin */
+  padding: 5px 10px; /* Add padding to status for better spacing */
+  min-height: 20px;
+  background-color: rgba(0, 0, 0, 0.05); /* Optional: Add background to status */
+  border-bottom-left-radius: 12px; /* Match body's border radius */
+  border-bottom-right-radius: 12px;
+}
+  </style>
+</head>
+<body>
+  <div id="button-container">
+    <button id="exportJson" class="icon-button" title="Export as JSON">
+      <img src="../images/download.svg" alt="Export as JSON">
+    </button>
+    <button id="saveToMongo" class="icon-button" title="Save">
+      <img src="../images/icon128.png" alt="Save Icon">
+    </button>
+  </div>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
