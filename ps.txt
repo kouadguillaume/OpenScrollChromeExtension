@@ -1,0 +1,17 @@
+OpenScroll/
+├── manifest.json
+├── background.js
+├── content.js
+├── scrapers/
+│   ├── chatgpt.js
+│   ├── chatopenai.js
+│   ├── claude.js
+│   ├── xai.js
+│   ├── perplexity.js
+├── images/
+│   ├── icon16.png
+│   ├── icon32.png
+│   ├── icon48.png
+│   ├── icon128.png
+│   └── download.svg (optional)
+└── onboarding.html (assumed)
