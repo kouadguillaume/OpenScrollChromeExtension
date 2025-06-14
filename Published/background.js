@@ -69,14 +69,15 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   }
 });
 
-// Handle MongoDB save requests from popup
+// Handle save requests from popup and content scripts
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message.action === 'saveToMongoDB') {
-    saveToMongoDB(message.data)
+  if (message.action === 'saveToScroll') {
+    saveToScroll(message.data)
       .then(result => sendResponse({ success: true, result }))
       .catch(error => sendResponse({ success: false, error: error.message }));
-    return true; // Async response
+    return true; // Required for async response
   }
+  return false; // Not handled
 });
 
 // Context menu for JSON download
