@@ -69,14 +69,34 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   }
 });
 
-// Handle MongoDB save requests from popup
+// Handle save requests from popup
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message.action === 'saveToMongoDB') {
-    saveToMongoDB(message.data)
-      .then(result => sendResponse({ success: true, result }))
-      .catch(error => sendResponse({ success: false, error: error.message }));
-    return true; // Async response
+  if (message.action === 'saveToScroll') {
+    console.log('Received save request with data:', message.data);
+    saveToScroll(message.data)
+      .then(result => {
+        console.log('Save successful:', result);
+        sendResponse({ success: true, result });
+      })
+      .catch(error => {
+        console.error('Save failed:', error);
+        sendResponse({ 
+          success: false, 
+          error: error.message || 'Failed to save conversation' 
+        });
+      });
+    return true; // Keep the message channel open for async response
   }
+  
+  // Add response for unsupported actions
+  if (message.action) {
+    console.warn('Unhandled action:', message.action);
+    sendResponse({ 
+      success: false, 
+      error: `Unsupported action: ${message.action}` 
+    });
+  }
+  return false;
 });
 
 // Context menu for JSON download
