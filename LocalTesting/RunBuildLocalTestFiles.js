@@ -61,14 +61,8 @@ async function cleanAndCreateDir(dir) {
   try {
     // Remove directory if it exists
     if (fs.existsSync(dir)) {
-      // Remove directory recursively
-      const rimraf = require('rimraf');
-      await new Promise((resolve, reject) => {
-        rimraf(dir, (err) => {
-          if (err) reject(err);
-          else resolve();
-        });
-      });
+      // Remove directory recursively using fs.rm (built into Node.js)
+      await fs.promises.rm(dir, { recursive: true, force: true });
     }
     
     // Create fresh directory
